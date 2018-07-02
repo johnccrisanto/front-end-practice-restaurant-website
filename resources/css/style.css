@@ -1,8 +1,10 @@
+/* Basic Setup */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 html {
     background-color: #ffffff;
@@ -13,7 +15,263 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* Reusable components */
 .row {
     max-width: 1140px;
     margin: 0 auto;
 }
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/* Paragraphs */
+.long-copy {
+    line-height: 150%;
+    width: 70%;
+    margin-left: 15%;
+
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+    text-align: justify;
+}
+
+/* Icons */
+.icon-big {
+    display: block;
+    font-size: 250%;
+    color: #e67e22;
+   
+}
+
+/* Header elements */
+
+h1, h2, h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 250%;
+    color: #ffffff;
+    word-spacing: 4px;
+
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+
+}
+
+h2:after {
+    margin: 15px auto;
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: "";
+    width: 100px;
+}
+
+h3 {
+    font-size: 120%;
+    margin-bottom: 10px;
+
+}
+
+/* Actual header portion of the web page */
+header {
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/background-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-nav {
+    margin-top: 55px;
+    float: right;
+    list-style: none;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding-bottom: 5px;
+    font-size: 90%;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+}
+
+.logo {
+    margin-top: 20px;
+    height: 100px;
+    widows: auto;
+    float: left;
+}
+
+.bg-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Buttons */
+
+.btn:link, .btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn:hover, .btn:active {
+    background-color: #cf6d17;
+}
+
+.btn-full:link, .btn-full:visited {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #ffffff;
+    margin-right: 15px;
+}
+
+.btn-full:hover, .btn-full:active {
+    background-color: #cf6d17;
+    border: 1px solid #cf6d17;
+
+}
+
+.btn-ghost:link, .btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn-ghost:hover, .btn-ghost:active {
+    border: 1px solid #e67e22;
+    color: #ffffff;
+}
+
+/* Meals showcase section */
+.section-meals {
+    padding-top: 0;
+}
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.meal-photo img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    opacity: 0.5;
+    transition: opacity 0.5s, transform 0.5s;
+
+}
+
+.meal-photo img:hover {
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+/* How it works */
+.section-steps {
+    background-color: #f4f4f4;
+}
+
+.steps-box:first-child {
+    padding-right: 3%;
+    text-align: right;
+    margin-top: 30px;
+}
+
+.steps-box:last-child {
+    padding-left: 3%;
+    margin-top: 70px; 
+}
+
+.app-screen {
+    width: 45%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 90px;
+}
+
+.works-step div {
+    margin-right: 15px;
+    padding-top: 5px;
+    font-size: 150%;
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    float: left;
+}
+
+.btn-app img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
